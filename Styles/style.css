@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'RR';
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+.header__nav-box,
+.footer__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.header__nav-list,
+.footer__list {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.header__nav-link {
+    color: #000;
+    font-size: 16px;
+    padding-top: 31px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Я не знаю как правильно сделать полосы сверху
+и снизу, уверен что сделал код не правильно,
+можете пожалуйста написать через какую команду
+надо было делать полосы сверху и снизу,
+у меня были идеи насчёт border-top, border-bottom,
+text-decoration, но получить хороший результат не вышло( */
+.header__nav-link:hover::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    background: #000;
+
+}
+
+.header__nav-link:hover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    background: #000;
+
+}
+
+
+
+
+
+.header__form {
+    display: flex;
+}
+
+.header__search {
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    outline: none;
+    padding: 8px 12px;
+    color: #000;
+    font-size: 12px;
+
+}
+
+.header__btn {
+    border-radius: 0px 10px 10px 0px;
+    background: #000;
+    border: none;
+    outline: none;
+    padding: 8px 17px;
+    color: #FFF;
+    font-size: 12px;
+    transition: all 250ms;
+}
+
+.header__btn:hover {
+    color: aquamarine;
+}
+
+
+
+
+
+
+
+.header__box {
+    background: url(../images/head-img.jpg) no-repeat center /cover;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    color: #FFF;
+    font-family: 'RSB';
+    font-size: 59px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.header__text {
+    color: #FFF;
+    font-family: 'RL';
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dress__box {
+    display: flex;
+}
+
+.dress__item {
+    box-shadow: 0 0 2px 1px darkblue inset;
+    /* Незнаю зачем добавил, но пусть будет */
+    background: #181D28;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    transition: all 300ms;
+}
+
+.dress__text {
+    color: #FFF;
+    font-family: 'RSB';
+    font-size: 18px;
+
+}
+
+.dress__item:hover {
+    background: #6B4B6B;
+}
+
+.dress__item-link {
+    width: 25%;
+}
+
+
+.content__box {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin: 40px 0;
+}
+
+
+
+
+.content__title {
+    color: #000;
+    font-family: 'RSB';
+    font-size: 22px; 
+    text-align: center;   
+}
+
+.content__text {
+    color: #000;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+.tiro-box {
+    margin: 40px 0;
+}
+
+.tiro__title {
+    color: #000;
+    font-family: 'RSB';
+    font-size: 22px;
+    text-align: center;
+}
+
+
+.tiro__list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 142px;
+    row-gap: 14px;
+    /* можно было использовать jc: space-Beetwen
+    но тогда слова стоялибы криво и не так ровно
+    как надо, поэтому использовал width: 108; */
+}
+
+.Tiro__img {
+    width: 100%;
+}
+
+.tiro__link {
+    max-width: 108px;
+    width: 100%;
+    color: #000;
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+.tiro__link:hover {
+    color:blue;
+}
+
+
+
+
+
+
+
+.footer {
+    background: #181D28;
+    padding: 35px 0;
+}
+
+
+
+.footer__link {
+    color: #FFF;
+    font-size: 20px;
+    transition: all 250ms;
+}
+
+.footer__link:hover {
+    color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+.hmm__fun-cat {
+    position: fixed;
+    bottom: 150px;
+    right: 0;
+    opacity: 0;
+    transition: all 3000ms;
+    height: 150px;
+    width: 230px;
+}
+/* :] */
+
+.hmm__fun-cat:hover {
+    opacity: 1;
+}
+
+@media (max-width:1140px) {
+    .tiro__list {
+        justify-content: center;
+    }
+    .content__box {
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: center;
+    }
+}
+@media (max-width: 900px) {
+    .dress__box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dress__item {
+        box-shadow: none;
+        border: 1px solid #6B4B6B;
+    }
+    .dress__item-link {
+        width: 100%;
+
+    }
+    .header__nav-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width:576px) {
+    .footer__box {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .footer {
+        padding: 25px 0;
+    }
+    .header__nav-link {
+        padding: 16px 0;
+    }
+    .header__logo {
+        font-size: 50px;
+    }
+    .header__box img {
+        width: 200px;
+    }
+    .header__box {
+        height: auto;
+        padding: 30px 0;
+        gap: 15px;
+    }
+    .header__text {
+        font-size: 20px;
+    }
+    .tiro__list {
+        text-align: center;
+    }
+    .hmm__fun-cat {
+        width: 170px;
+        height: 100px;
+    }
+}
